@@ -1,0 +1,14 @@
+stages:
+  process:
+    cmd: py src/process_ratings.py
+    deps:
+      - data/raw/ratings.csv
+    outs:
+      - data/processed/ratings_clean.csv
+
+  features:
+    cmd: py src/create_features.py
+    deps:
+      - data/processed/ratings_clean.csv
+    outs:
+      - models/user_similarity.pkl
