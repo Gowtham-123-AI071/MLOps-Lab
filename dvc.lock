@@ -37,14 +37,14 @@ stages:
       size: 761
     - path: src/ingest.py
       hash: md5
-      md5: 52711dc2468bb33ea30fef1f983397fe
-      size: 1804
+      md5: b8556f92ea320602dc6b26170a4f322c
+      size: 3079
     outs:
     - path: data/processed/ratings_clean.csv
       hash: md5
-      md5: c55d88ff7e63a30c79bb0ee45efd9f89
-      size: 73431
+      md5: 2ec7d8e82a1eee565db60fb3ba8e92bb
+      size: 70314
     - path: evaluations/validation_report.json
       hash: md5
-      md5: 52811975fc366a47467bdd8c8d329d05
-      size: 107
+      md5: d12c5b604f381ad1b901432de12697d4
+      size: 114

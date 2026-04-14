@@ -1,9 +1,6 @@
 {
-  "rows": 2000,
-  "columns": [
-    "user_id",
-    "movie_id",
-    "rating",
-    "timestamp"
-  ]
+  "total_rows_after_cleaning": 1915,
+  "dtype_errors": 0,
+  "range_violations": 0,
+  "null_violations": 0
 }
