@@ -1,0 +1,9 @@
+{
+  "rows": 2000,
+  "columns": [
+    "user_id",
+    "movie_id",
+    "rating",
+    "timestamp"
+  ]
+}
