@@ -3,10 +3,15 @@ stages:
     cmd: py -m src.ingest
     deps:
       - src/ingest.py
-      - src/config.py
       - data/raw/ratings.csv
     outs:
       - data/processed/ratings_clean.csv
-    metrics:
-      - evaluations/validation_report.json:
-          cache: false
+
+  features:
+    cmd: py -m src.prepare_features data/processed/ratings_clean.csv models
+    deps:
+      - src/features.py
+      - src/prepare_features.py
+      - data/processed/ratings_clean.csv
+    outs:
+      - models/rating_features.pkl
