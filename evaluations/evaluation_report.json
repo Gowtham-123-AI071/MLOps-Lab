@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "model_type": "KNNRecommendation",
+    "hyperparameters": {
+      "k": 15,
+      "use_similarity_weights": false,
+      "default_rating": 3.0
+    },
+    "training": {
+      "n_train_samples": 1532,
+      "n_val_samples": 383,
+      "split_ratio": 0.8
+    },
+    "evaluation": {
+      "rmse": 1.1925366009661384,
+      "mae": 0.9870856132747236,
+      "dataset": "MovieLens (subset)"
+    },
+    "feature_store": "models/rating_features.pkl",
+    "ratings_source": "data/processed/ratings_clean.csv"
+  },
+  "test_set": {
+    "n_samples": 1915,
+    "date": "2026-04-15T21:58:54.740515"
+  },
+  "rating_prediction": {
+    "rmse": 1.259367382951426,
+    "mae": 1.02675294143965,
+    "median_error": 0.9137635041891476,
+    "mean_error": 1.02675294143965,
+    "std_error": 0.7292356289204134,
+    "min_error": 0.0005083417544540225,
+    "max_error": 3.71457697356065,
+    "percentiles": {
+      "p25": 0.43947439916028963,
+      "p50": 0.9137635041891476,
+      "p75": 1.4692764331572097,
+      "p90": 1.9846286370430024,
+      "p95": 2.3602541374854247
+    },
+    "n_samples": 1915
+  },
+  "coverage": {
+    "coverage_ratio": 1.0,
+    "n_recommended": 99,
+    "n_total": 99,
+    "recommendation_threshold": 0.5
+  },
+  "sparsity": {
+    "n_users": 199,
+    "n_movies": 100,
+    "n_ratings": 1915,
+    "max_possible": 19900,
+    "density": 0.09623115577889448,
+    "sparsity": 0.9037688442211055,
+    "ratings_per_user": {
+      "mean": 9.623115577889447,
+      "median": 9.0,
+      "min": 2,
+      "max": 17
+    },
+    "ratings_per_movie": {
+      "mean": 19.343434343434343,
+      "median": 19.0,
+      "min": 11,
+      "max": 36
+    }
+  },
+  "error_distribution": {
+    "mean_error": 1.02675294143965,
+    "std_error": 0.7292356289204134,
+    "min_error": 0.0005083417544540225,
+    "max_error": 3.71457697356065,
+    "distribution": {
+      "error_0.0_0.5": {
+        "count": 551,
+        "percentage": 28.772845953002612
+      },
+      "error_0.5_1.0": {
+        "count": 493,
+        "percentage": 25.744125326370757
+      },
+      "error_1.0_1.5": {
+        "count": 411,
+        "percentage": 21.4621409921671
+      },
+      "error_1.5_2.0": {
+        "count": 276,
+        "percentage": 14.412532637075717
+      },
+      "error_2.0_5.0": {
+        "count": 184,
+        "percentage": 9.608355091383812
+      }
+    }
+  },
+  "baselines": {
+    "always_mean": {
+      "value": 2.9710191891030253,
+      "rmse": 1.1493523360116265
+    },
+    "always_median": {
+      "value": 2.985035011529446,
+      "rmse": 1.149437791084699
+    },
+    "always_neutral": {
+      "value": 3.0,
+      "rmse": 1.149717652163186
+    },
+    "best_baseline_rmse": 1.1493523360116265
+  },
+  "by_engagement": {
+    "low": {
+      "n_samples": 77,
+      "mae": 0.9563945990879757,
+      "mean_engagement": 4.428571428571429
+    },
+    "medium": {
+      "n_samples": 1838,
+      "mae": 1.0297004889701606,
+      "mean_engagement": 10.949945593035908
+    }
+  }
+}
