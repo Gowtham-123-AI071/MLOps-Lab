@@ -34,7 +34,7 @@ results = run_parameter_sweep(
     X_test=X_test,
     y_train=y_train,
     y_test=y_test,
-    experiment_name="movielens_knn_sweep"
+    experiment_name="movielens_knn_sweep_v2"
 )
 
 # Best model
